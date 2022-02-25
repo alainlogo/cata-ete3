@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* SOURIS */
+.inner-cursor{
+    position: fixed;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background-color: brown;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+    z-index: 11;
+}
+
+.inner-cursor.grow{
+    width: 50px;
+    height: 50px;
+    transition: width 0.5s, height 0.5s;
+    z-index: 11;
+}
+
+.outer-cursor{
+    position: fixed;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    border: 1px solid brown;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.2s;
+}
+img{
+    width: 100%;
+}
+.nav{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+    background-color: white; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav .logo{
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 30px;
+}
+.nav ul{
+    display: flex;
+}
+.nav li{
+    margin: 15px;
+    font-size: 20px;
+}
+.nav a{
+    color: black;
+}
+
+
+
+.header{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    background-image: url(../img/main.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+.header_text{
+    padding-top: 400px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+.header_text p{
+    font-size: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 7px;
+}
+.header_text h1{
+    font-size: 100px;
+}
+
+
+.bando{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    right: 0;
+    bottom: 0;
+}
+.bando_box{
+    padding: 20px;
+}
+.box_haut{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+.box_haut i{
+    font-size: 40px;
+    margin-right: 20px;
+}
+.box_text{
+    font-size: 20px;
+}
+.bando_btn{
+    display: flex;
+    flex-direction: column;
+}
+.btn{
+    padding: 20px 40px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.coll1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* width: 80%; */
+}
+.coll_text{
+    width: 40%;
+    padding: 100px;
+    margin-left: 100px;
+}
+.coll_text h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.coll_text p{
+    font-size: 20px;
+    font-family: 'Gill Sans';
+    margin-bottom: 100px;
+}
+.coll_text a{
+    position: relative;
+    padding: 20px 100px;
+    background-color: black;
+    color: white;
+    font-size: 17px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.coll_text a i{
+    position: absolute;
+    font-size: 25px;
+    top: 20px;
+    left:10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.coll_text a:hover i{
+    opacity: 1;
+}
+.coll_text span{
+    position: absolute;
+    /* width: 100%;
+    height: 100%; */
+    top: 20px;
+    right: 30px;
+    transition: 0.3s;
+
+}
+.coll_text a:hover span{
+    transform: translateX(7px);
+}
+
+
+
+/* DIAPO */
+#wrapper {
+    margin-top:50px;
+    position: relative;
+    width: 60%;
+    height: 500px;
+    margin: auto;
+  }
+  
+  #carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  #carousel::-webkit-scrollbar {
+    height: 0;
+  }
+  
+  #prev,
+  #next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: rgb(226, 199, 90);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  #prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+  }
+  
+  #next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+  
+  #content {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+  }
+  
+  .item {
+    width: 380px;
+    height: 450px;
+    transition:12s;
+}
+
+.item .item_det{
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
+
+
+.coll_prese{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.prese_text{
+    margin: 100px;
+    width: 40%;
+}
+
+.prese_img{
+    width: 60%;
+    height: 100%;
+    background-image: url(../img/floral.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+}
+.prese_img1{
+    background-image: url(../img/oiseau.jpg);
+}
+.coll_prese h3{
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+.coll_prese h4{
+    color: grey;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.coll_prese p{
+    font-size: 20px;
+    font-family: 'Gill Sans';
+    margin-bottom: 50px;
+}
+
+.prese_text a{
+    position: relative;
+    padding: 20px 100px;
+    background-color: black;
+    color: white;
+
+}
+.prese_text a i{
+    position: absolute;
+    font-size: 25px;
+    top: 20px;
+    left:20px;
+    opacity: 0;
+    transition: 0.5s;
+}
+.prese_text a:hover i{
+    opacity: 1;
+}
+.prese_text span{
+    position: absolute;
+    /* width: 100%;
+    height: 100%; */
+    top: 20px;
+    right: 55px;
+    transition: 0.3s;
+
+}
+.prese_text a:hover span{
+    transform: translateX(7px);
+}
+.depuis{
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.depuis video{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.depuis img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.depuis_text{
+    width: 65%;
+}
+.depuis_text span{
+    letter-spacing: 5px;
+    font-size: 25px;
+}
+.depuis_text h2{
+    margin-top: 15px;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.depuis_text p{
+    font-size: 30px;
+}
